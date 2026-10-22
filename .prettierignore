@@ -1,0 +1,11 @@
+node_modules
+.next
+coverage
+dist
+build
+.worktrees
+package-lock.json
+.agents
+openspec
+AGENTS.md
+
