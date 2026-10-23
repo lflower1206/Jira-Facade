@@ -8,4 +8,5 @@ package-lock.json
 .agents
 openspec
 AGENTS.md
+src/generated
 

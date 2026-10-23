@@ -18,6 +18,7 @@ describe("Header component", () => {
   it("renders navigation links", () => {
     render(<Header />);
     expect(screen.getByRole("link", { name: /dashboard/i })).toHaveAttribute("href", "/");
+    expect(screen.getByRole("link", { name: /work items/i })).toHaveAttribute("href", "/workitems");
     expect(screen.getByRole("link", { name: /health api/i })).toHaveAttribute(
       "href",
       "/api/health"

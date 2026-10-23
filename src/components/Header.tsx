@@ -33,6 +33,12 @@ export const Header: React.FC<HeaderProps> = ({
         >
           Dashboard
         </Link>
+        <Link
+          href="/workitems"
+          className="text-sm font-medium text-slate-700 transition-colors hover:text-blue-600 dark:text-slate-200 dark:hover:text-blue-400"
+        >
+          Work Items
+        </Link>
         <a
           href="/api/health"
           target="_blank"
