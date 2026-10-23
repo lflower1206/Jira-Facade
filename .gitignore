@@ -32,6 +32,16 @@ yarn-error.log*
 .env*.local
 .env
 
+# database
+/data/*.db
+/data/*.db-journal
+/data/*.db-shm
+/data/*.db-wal
+!/data/.gitkeep
+
+# generated code
+/src/generated/
+
 # vercel
 .vercel
 
