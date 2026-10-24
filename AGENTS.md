@@ -40,3 +40,15 @@ Whenever ready to commit changes:
 ## OpenSpec Guidelines
 - Follow the OpenSpec schema and workflows configured in `openspec/` and `.agents/`.
 - Verify changes against specifications before requesting commit confirmation.
+
+---
+
+## Container Runtime & Docker Guidelines
+- **Container Runtime**: This environment uses **Colima** as the container runtime.
+- **Pre-Check Requirement**: Before running any `docker` or `docker compose` commands, verify that the default Colima instance is running (`colima status`). If it is not running, start it first via `colima start`.
+- **Development Workflow**:
+  - `npm run docker:dev`: Starts the containerized environment (`docker compose up --build`) on `http://localhost:3000`.
+  - `npm run docker:down`: Stops running containers (`docker compose down`).
+  - `npm run docker:reset`: Stops containers and removes named volumes (`docker compose down -v`).
+  - **Dependency Updates**: Named volumes isolate `/app/node_modules`. Whenever `package.json` dependencies are added or updated, execute `npm run docker:reset` before restarting with `npm run docker:dev` to refresh the container dependencies.
+
